@@ -1,0 +1,95 @@
+{% extends 'spaceproj/layout2.html' %} {% load static %} {% block content %}
+
+<!-- Login & Register Start -->
+<div class="section login-register-section section-padding">
+  <div class="container">
+    <!-- Login & Register Wrapper Start -->
+    <div class="login-register-wrap">
+      <div class="row gx-5">
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+          <!-- Login & Register Box Start -->
+          <!-- Section Title Start -->
+          <div class="login-register-box">
+            <div class="section-title">
+              <h2 class="title text-center">Reserve a Seat</h2>
+            </div>
+            <div>
+              {% for msg in messages %}
+              <div class="alert alert-primary" role="alert">{{msg}}</div>
+              {% endfor %}
+            </div>
+            <div>
+              <p class="single-form text-center mt-2" style="color: red">
+                * indicates a required field
+              </p>
+            </div>
+
+            <div class="login-register-form">
+              <form method="POST">
+                {% csrf_token %}
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="single-form">{{form.FirstName}}</div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="single-form">{{form.LastName}}</div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="single-form">{{form.PhoneNumber}}</div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="single-form">{{form.DOB}}</div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="single-form">{{form.Address1}}</div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="single-form">{{form.Address2}}</div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="single-form">{{form.Zip}}</div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="single-form">{{form.Country}}</div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="single-form">{{form.City}}</div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="single-form">{{form.State}}</div>
+                  </div>
+                </div>
+
+                <div class="single-form">{{form.InfoAboutUser}}</div>
+                <div class="single-form">{{form.AdventuresInfo}}</div>
+
+                <div class="form-btn">
+                  <button class="btn">Submit</button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <!-- Login & Register Box End -->
+        </div>
+        <div class="col-md-1"></div>
+      </div>
+    </div>
+    <!-- Login & Register Wrapper End -->
+  </div>
+</div>
+<!-- Login & Register End -->
+
+{% endblock %}

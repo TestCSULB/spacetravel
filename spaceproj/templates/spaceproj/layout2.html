@@ -1,0 +1,190 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <!-- Mirrored from thepixelcurve.com/html/techmax/techmax/index-3.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 10 Dec 2022 08:15:31 GMT -->
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Interstellar - Space Travels</title>
+    <meta name="robots" content="noindex, follow" />
+    <meta
+      name="description"
+      content="Interstellar Travel Destination - BECOME AN ASTRONAUT"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- Favicon -->
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="{% static 'images/favicon.png' %}"
+    />
+
+    <!-- CSS
+	============================================ -->
+
+    <!-- Icon Font CSS -->
+    <link rel="stylesheet" href="{% static 'css/plugins/all.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/plugins/flaticon.css' %}" />
+
+    <!-- Plugins CSS -->
+    <link
+      rel="stylesheet"
+      href="{% static 'css/plugins/bootstrap.min.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'css/plugins/swiper-bundle.min.css' %}"
+    />
+    <link rel="stylesheet" href="{% static 'css/plugins/aos.css' %}" />
+    <link
+      rel="stylesheet"
+      href="{% static 'css/plugins/magnific-popup.css' %}"
+    />
+
+    <!-- Main Style CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+
+    <!--====== Use the minified version files listed below for better performance and remove the files listed above ======-->
+    <!-- <link rel="stylesheet" href="{% static 'css/vendor/plugins.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.min.css' %}"> -->
+  </head>
+
+  <body>
+    <div class="main-wrapper">
+      <!-- Preloader start -->
+      <div id="preloader">
+        <div class="preloader">
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <!-- Preloader End -->
+
+      <!-- Header Start  -->
+      <div
+        id=""
+        class="section header-section header-section-3 transparent-header transparent-header-3 sticky"
+      >
+        <div class="container">
+          <!-- Header Wrap Start  -->
+          <div class="header-wrap">
+            <div class="header-logo header-logo-3">
+              <a class="logo-white" href="{% url 'index' %}"
+                ><img src="{% static 'images/logo-orange.png' %}" alt=""
+              /></a>
+              <a class="logo-black" href="{% url 'index' %}"
+                ><img src="{% static 'images/logo-2.png' %}" alt=""
+              /></a>
+            </div>
+
+            <div class="header-menu header-menu-3 d-none d-lg-block">
+              <ul class="main-menu">
+                <li>
+                  <a href="{% url 'index' %}">Home</a>
+                </li>
+                <li>
+                  <a href="{% url 'booking' %}">Book a FLight</a>
+                </li>
+                <li>
+                  <a href="{% url 'plan' %}">Packages</a>
+                </li>
+                <li>
+                  <a href="{% url 'about' %}">About Us</a>
+                </li>
+                <li>
+                  <a href="{% url 'contact' %}">Contact</a>
+                </li>
+                
+              </ul>
+            </div>
+
+            <!-- Header Meta Start -->
+            <div class="header-meta">
+              <div class="header-btn-2 d-none d-xl-block">
+                {% if user.is_authenticated %}
+                <a class="btn" href="{% url 'logout' %}">Signout</a>
+                {% else %}
+                <a class="btn" href="{% url 'login' %}">Login/Signup</a>
+                {% endif %}
+              </div>
+            </div>
+            <!-- Header Meta End  -->
+          </div>
+          <!-- Header Wrap End  -->
+        </div>
+      </div>
+      <!-- Header End -->
+
+      {% block content %} {% endblock %} {% include 'spaceproj/footer.html' %}
+    </div>
+
+    <!-- JS
+    ============================================ -->
+    <script src="{% static 'js/vendor/jquery-1.12.4.min.js' %}"></script>
+    <script src="{% static 'js/vendor/modernizr-3.11.2.min.js' %}"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="{% static 'js/plugins/popper.min.js' %}"></script>
+    <script src="{% static 'js/plugins/bootstrap.min.js' %}"></script>
+
+    <!-- Plugins JS -->
+    <script src="{% static 'js/plugins/swiper-bundle.min.js' %}"></script>
+    <script src="{% static 'js/plugins/aos.js' %}"></script>
+    <script src="{% static 'js/plugins/waypoints.min.js' %}"></script>
+    <script src="{% static 'js/plugins/back-to-top.js' %}"></script>
+    <script src="{% static 'js/plugins/jquery.counterup.min.js' %}"></script>
+    <script src="{% static 'js/plugins/appear.min.js' %}"></script>
+    <script src="{% static 'js/plugins/jquery.magnific-popup.min.js' %}"></script>
+
+    <!-- Main JS -->
+    <script src="{% static 'js/main.js' %}"></script>
+    <script src="{% static 'js/site.js' %}"></script>
+    <script>
+      if (window.location.pathname.includes("register")) {
+        var inputs, index;
+        inputs = document.getElementsByTagName("input");
+        for (index = 0; index < inputs.length; ++index) {
+          inputs[index].classList.add("form-control");
+        }
+        inputs[1].placeholder = "Enter valid email";
+        inputs[2].placeholder = "Enter your username";
+        inputs[3].placeholder = "Enter password";
+        inputs[4].placeholder = "Confirm your Password";
+      }
+
+      if (window.location.pathname.includes("contact")) {
+        var inputs, index;
+        inputs = document.getElementsByTagName("input");
+        for (index = 0; index < inputs.length; ++index) {
+          inputs[index].classList.add("form-control");
+        }
+        console.log(inputs[0]);
+        inputs[1].placeholder = "Enter your First Name *";
+        inputs[2].placeholder = "Enter your Last Name *";
+        inputs[3].placeholder = "Enter Phone Number *";
+        inputs[4].placeholder = "Date of Birth * (mm/dd/yyyy)";
+        inputs[5].placeholder = "Enter Address line 1 *";
+        inputs[6].placeholder = "Enter Address line 2";
+        inputs[7].placeholder = "Enter Zip Code *";
+        inputs[8].placeholder = "Enter Country *";
+        inputs[9].placeholder = "Enter your City *";
+        inputs[10].placeholder = "Enter your State *";
+
+        inputs = document.getElementsByTagName("textarea");
+        for (index = 0; index < inputs.length; ++index) {
+          inputs[index].classList.add("form-control");
+        }
+        inputs[0].placeholder =
+          "In a few words, tell us about yourself (500 characters or less)*";
+        inputs[1].placeholder =
+          "Please describe your other notable adventures.*";
+      }
+    </script>
+  </body>
+
+  <!-- Mirrored from thepixelcurve.com/html/techmax/techmax/index-3.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 10 Dec 2022 08:15:39 GMT -->
+</html>

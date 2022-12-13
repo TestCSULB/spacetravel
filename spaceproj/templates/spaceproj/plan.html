@@ -1,0 +1,193 @@
+{% extends 'spaceproj/layout.html' %} {% load static %} {% block content %}
+
+<!-- Hero Start -->
+<div
+  class="section tech-hero-section-5"
+  style="background-image: url(static/images/img/jeep.jpg)"
+>
+  <div class="container">
+    <div class="row">
+      <!-- Hero Content Start -->
+      <div class="hero-content text-center" style="margin-top: 200px">
+        <h3
+          class="sub-title aos-init aos-animate"
+          data-aos-delay="600"
+          data-aos="fade-up"
+          style="font-size: 30px"
+        >
+          Travel to Faraway Worlds
+        </h3>
+        <h2
+          class="title aos-init aos-animate"
+          data-aos="fade-up"
+          data-aos-delay="700"
+          style="font-size: 50px"
+        >
+          Interstellar Travel Destination
+        </h2>
+        <h3
+          class="sub-title aos-init aos-animate"
+          data-aos-delay="600"
+          data-aos="fade-up"
+          style="font-size: 30px"
+        >
+          Become an Astronaut
+        </h3>
+        <div
+          class="hero-btn aos-init aos-animate"
+          data-aos="fade-up"
+          data-aos-delay="800"
+        >
+          {% comment %} <a class="btn btn-3" href="{% url 'contact' %}">Contact</a> {% endcomment %}
+        </div>
+      </div>
+      <!-- Hero Content End -->
+    </div>
+  </div>
+</div>
+<!-- Hero End -->
+
+<!-- Pricing Start -->
+
+<div class="section pricing-section pricing-section-2 section-padding-02">
+  <div class="container">
+    <!-- Pricing Wrap Start -->
+    <div class="pricing-wrap">
+      <div class="section-title2 text-center">
+        <h2 class="title">Best <span>plans</span> for all</h2>
+        <p>
+          We’ll match you to the best possible plan according to your needs.
+        </p>
+      </div>
+      <!-- Pricing Content Wrap Start -->
+      <div class="pricing-content-wrap">
+        <div class="row">
+          <div class="col-xl-4 col-md-6">
+            <!-- Single Pricing Start -->
+            <div class="single-pricing">
+              <div class="pricing-badge">
+                <span class="title">Solo</span>
+              </div>
+              <div class="pricing-content">
+                <ul class="pricing-list">
+                  <li><i class="fas fa-check"></i> Accomodates 1 person</li>
+                  <li>
+                    <i class="fas fa-check"></i> Price depends on destination
+                  </li>
+                  <li>
+                    <i class="fas fa-check"></i> Price depends on duration
+                  </li>
+                </ul>
+                <div class="pricing-btn text-center">
+                  <a class="btn" href="{% url 'contact' %}">Contact</a>
+                </div>
+              </div>
+            </div>
+            <!-- Single Pricing End -->
+          </div>
+          <div class="col-xl-4 col-md-6">
+            <!-- Single Pricing Start -->
+            <div class="single-pricing active">
+              <div class="pricing-badge">
+                <span class="title">Couple</span>
+              </div>
+              <div class="pricing-content">
+                <ul class="pricing-list">
+                  <li><i class="fas fa-check"></i> Accomodates 2 person</li>
+                  <li>
+                    <i class="fas fa-check"></i> Price depends on destination
+                  </li>
+                  <li>
+                    <i class="fas fa-check"></i> Price depends on duration
+                  </li>
+                </ul>
+                <div class="pricing-btn text-center">
+                  <a class="btn" href="{% url 'contact' %}">Contact</a>
+                </div>
+              </div>
+            </div>
+            <!-- Single Pricing End -->
+          </div>
+          <div class="col-xl-4 col-md-6">
+            <!-- Single Pricing Start -->
+            <div class="single-pricing">
+              <div class="pricing-badge">
+                <span class="title">Team</span>
+              </div>
+              <div class="pricing-content">
+                <ul class="pricing-list">
+                  <li><i class="fas fa-check"></i> Accomodates 5-7 person</li>
+                  {% comment %} <li><i class="fas fa-check"></i> UnLimited</li>
+                  <li><i class="fas fa-check"></i> User Permissions</li> {% endcomment %}
+                  <li>
+                    <i class="fas fa-check"></i> Price depends on destination
+                  </li>
+                  <li>
+                    <i class="fas fa-check"></i> Price depends on duration
+                  </li>
+                </ul>
+                <div class="pricing-btn text-center">
+                  <a class="btn" href="{% url 'contact' %}">Contact</a>
+                </div>
+              </div>
+            </div>
+            <!-- Single Pricing End -->
+          </div>
+        </div>
+      </div>
+      <!-- Pricing Content Wrap End -->
+    </div>
+    <!-- Pricing Wrap End -->
+  </div>
+</div>
+<!-- Pricing End -->
+
+<!-- Brand Logo Start -->
+<div class="section Brand-section">
+  <div class="container">
+    <!-- Brand Wrapper Start -->
+    <div class="brand-wrapper section-padding text-center">
+      <h3 class="brand-title">
+        Step forward to fulfil your dream of going to the space.
+      </h3>
+
+      <!-- Brand Active End -->
+    </div>
+    <!-- Brand Wrapper End -->
+  </div>
+</div>
+<!-- Brand Logo End -->
+
+<!-- Cta Start -->
+<div class="section cta-section" style="margin-bottom: 50px;">
+  <div class="container">
+    <div
+      class="cta-wrap"
+      style="background-image: url(assets/images/bg/cta-bg.jpg)"
+    >
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <!-- Cta Left Start -->
+          <div class="cta-left">
+            {% comment %} <h2 class="title">Let's get to something beautiful together</h2> {% endcomment %}
+            <h2 class="title">Space for the curious</h2>
+          </div>
+          <!-- Cta Left End -->
+        </div>
+        <div class="col-lg-6">
+          <!-- Cta Right Start -->
+          <div class="cta-right">
+            <span class="number">contact@interstellar.com</span>
+            <div class="pricing-btn">
+              <a class="btn" href="{% url 'contact' %}">Contact Us</a>
+            </div>
+          </div>
+          <!-- Cta Right End -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Cta End -->
+
+{% endblock %}

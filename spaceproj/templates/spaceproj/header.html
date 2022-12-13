@@ -1,0 +1,58 @@
+{% load static %}
+
+<!-- Header Start  -->
+<div
+  id="header"
+  class="section header-section header-section-3 transparent-header transparent-header-3"
+>
+  <div class="container">
+    <!-- Header Wrap Start  -->
+    <div class="header-wrap">
+      <div class="header-logo header-logo-3">
+        <a class="logo-white" href="{% url 'index' %}"
+          ><img src="{% static 'images/logo-orange.png' %}" alt=""
+        /></a>
+        <a class="logo-black" href="{% url 'index' %}"
+          ><img src="{% static 'images/logo-2.png' %}" alt=""
+        /></a>
+      </div>
+
+      <div class="header-menu header-menu-3 d-none d-lg-block">
+        <ul class="main-menu">
+          <li>
+            <a href="{% url 'index' %}">Home</a>
+          </li>
+          <li>
+            <a href="{% url 'booking' %}">Book A Flight</a>
+          </li>
+          <li>
+            <a href="{% url 'plan' %}">Packages</a>
+          </li>
+          <li>
+            <a href="{% url 'about' %}">About Us</a>
+          </li>
+          <li>
+            <a href="{% url 'contact' %}">Contact Us</a>
+          </li>
+          {% comment %} <li>
+            <a href="{% url 'booking' %}">Book FLight</a>
+          </li> {% endcomment %}
+        </ul>
+      </div>
+
+      <!-- Header Meta Start -->
+      <div class="header-meta">
+        <div class="header-btn-2 d-none d-xl-block">
+          {% if user.is_authenticated %}
+          <a class="btn" href="{% url 'logout' %}">Signout</a>
+          {% else %}
+          <a class="btn" href="{% url 'login' %}">Login/Signup</a>
+          {% endif %}
+        </div>
+      </div>
+      <!-- Header Meta End  -->
+    </div>
+    <!-- Header Wrap End  -->
+  </div>
+</div>
+<!-- Header End -->
